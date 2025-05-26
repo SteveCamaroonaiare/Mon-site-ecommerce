@@ -1,0 +1,199 @@
+.Pouremail{
+  gap: 70px;
+  display: flex;
+  background: #ecb80c79;
+transform: translateY(30px);
+
+}
+
+.h{font-size: 1.6rem;
+padding: 20px;}
+.hh{
+  font-size: 0.2rem;
+  padding: 24px;
+}
+.hhh{
+  padding: 18px;
+  font-size: 1.7rem;
+  border: none;
+  
+}
+input::placeholder{font-size: 1rem;
+padding: 20px;}
+.hhh button{background-color: rgba(0, 0, 0, 0.349);}
+
+.footer {
+  margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background: linear-gradient(to bottom, rgba(19, 18, 18, 0.11), #eeeeee);
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #333;
+    height: 600px;
+    
+  }
+
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 15px;
+    bottom: 20px;
+  }
+  
+  .footer-section h2 {
+    color: #ecb80c;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  .made-with {
+    margin: 10px 0;
+    color: #666;
+  }
+  
+  .heart {
+    color: red;
+  }
+  
+  .youtube-btn {
+    background-color:#ecb80c;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  
+  .contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .contact p svg {
+    margin-right: 8px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .icon {
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .linkedin {
+    background-color: #d6001c;
+    color: white;
+    padding: 4px;
+    border-radius: 3px;
+  }
+  
+
+  @media (max-width: 768px) {
+  /* Container principal en colonne */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 20px 15px;
+    gap: 0;
+    background: linear-gradient(to bottom, rgba(19, 18, 18, 0.11), #eeeeee);
+  }
+
+  /* Chaque section prend 100% de largeur */
+  .footer-section {
+    width: 100%;
+    margin: 0;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  /* Supprime la bordure pour le dernier élément */
+  .footer-section:last-child {
+    border-bottom: none;
+  }
+
+  /* Style spécifique pour la section brand */
+  .brand {
+    order: 1;
+  }
+
+  /* Style pour les liens */
+  .links {
+    order: 2;
+  }
+
+  /* Style pour les contacts */
+  .contact {
+    order: 3;
+  }
+
+  /* Ajustements typographie */
+  .footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .footer-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .footer-section p, 
+  .footer-section li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  /* Style des icônes sociales */
+  .social-icons {
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  /* Section email responsive */
+  .Pouremail {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 15px;
+    transform: none;
+    text-align: center;
+    
+  }
+
+  .hhh {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hhh input,
+  .hhh button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+}

@@ -1,0 +1,486 @@
+
+ .shopping{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+
+.shopping .containerShopping .shoppingArtecl{
+    padding: 0.7rem;
+    border-radius: 16px;
+    height: 400px;
+}
+
+.containerShopping {
+  display: flex;
+  justify-content: center;
+  transform: translateX(-30px);
+  }
+
+ .shopping .sommer,
+ .statistics .filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0.5rem;
+}
+
+ .shopping .sommer h2 {
+  width: fit-content;
+}
+ .shopping .sommer button {
+  width: fit-content;
+  background-color: transparent;
+  margin: 1px;
+  padding: 0.2rem 0.5rem;
+  font-size: 20px;
+  border: solid 2px transparent;
+}
+
+ .shopping .sommer button:hover {
+  color: #00576a;
+  border: solid 2px #00576a;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.2s ease-in-out;
+  /* border:none; */
+}
+
+.shopping .containerShopping .shoppingArtecl > div {
+  width: 223px;
+  height: 283px;
+  overflow: hidden;
+  background-color: #f6f6f6;
+  border-radius: 16px;
+  padding: 0.5rem 0.5rem;
+
+}
+
+.shopping .containerShopping .shoppingArtecl:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.02);
+}
+
+.shopping .containerShopping .shoppingArtecl > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.shopping .containerShopping .shoppingArtecl p {
+  font-size: 15px;
+  font-weight: medium;
+  color: #100f0f;
+  text-align: left;
+  max-width: 223px;
+  max-height: 19px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 0.4rem;
+}
+
+.shopping .containerShopping .shoppingArtecl h3 {
+  font-size: 17px;
+  font-weight: medium;
+  color: #5742a9;
+  text-align: left;
+  max-width: 223px;
+  max-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ .shopping .containerShopping {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth; /* pour un défilement doux */
+  gap: 40px; /* espace entre les articles */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem;
+  box-sizing: border-box;
+}
+
+.containerShopping{
+  /*height: 200px;*/
+}
+
+
+.containerShopping::-webkit-scrollbar-thumb {
+  background: #888; /* Couleur de la scrollbar */
+  border-radius: 10px; /* Coins arrondis */
+}
+
+.prices {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+
+}
+
+.new-price {
+  color: rgb(187, 112, 13);
+  font-weight: bold;
+  margin-right: 10px;
+}
+.Profiter{
+  background-color: #e4a111;
+  border-radius: 20px;
+}
+
+.promo{
+  background-color: red;
+  border-radius: 20px;
+  width: 80%;
+transform: translateX(130px);}
+
+.trans{
+  background-color: transparent;
+}
+
+.espace{
+  gap: 20px;
+}
+
+
+.containerShopping {
+  display: flex;
+  flex-wrap: wrap; /* Permet le retour à la ligne */
+  gap: 10px; /* Espace entre les produits */
+  padding: 20px 0;
+  overflow-x: auto; /* Conserve le défilement horizontal si besoin */
+}
+
+.shoppingArtecl {
+  flex: 0 0 calc(25% - 30px); /* 5 produits par ligne (100%/5) avec gap */
+  box-sizing: border-box;
+}
+
+.imagepromo{
+  max-width: 300px;
+}
+
+/* Pour les écrans plus petits, ajustez le nombre de produits par ligne */
+@media (max-width: 1200px) {
+  .shoppingArtecl {
+    flex: 0 0 calc(25% - 20px); /* 4 produits par ligne */
+  }
+}
+
+@media (max-width: 768px) {
+  .shoppingArtecl {
+    flex: 0 0 calc(33.333% - 20px); /* 3 produits par ligne */
+  }
+}
+
+@media (max-width: 480px) {
+  .shoppingArtecl {
+    flex: 0 0 calc(50% - 20px); /* 2 produits par ligne */
+  }
+}
+
+.shoppingArtecl{max-width: 250px;}
+
+
+
+
+/* Conteneur principal */
+.products-container-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Grille des produits */
+.containerShopping {
+  display: inline-flex; /* Permet le défilement horizontal */
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 20px 40px; /* Espace pour les boutons */
+  transition: transform 0.3s ease;
+}
+
+/* Style des produits */
+.shoppingArtecl {
+  flex: 0 0 18%; /* 5 produits par ligne (100%/5 - gap) */
+  min-width: 220px; /* Largeur minimale */
+  padding: 15px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.shoppingArtecl:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Conteneur d'image */
+.product-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.imagepromo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.shoppingArtecl:hover .imagepromo {
+  transform: scale(1.05);
+}
+
+/* Boutons de défilement */
+.scroll-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.scroll-buttons button {
+  background: rgba(0,0,0,0.1);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-buttons button:hover {
+  background: rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .shoppingArtecl {
+    flex: 0 0 22%; /* 4 produits par ligne */
+  }
+}
+
+@media (max-width: 992px) {
+  .shoppingArtecl {
+    flex: 0 0 30%; /* 3 produits par ligne */
+  }
+}
+
+@media (max-width: 768px) {
+  .shoppingArtecl {
+    flex: 0 0 45%; /* 2 produits par ligne */
+  }
+}
+
+@media (max-width: 576px) {
+  .shoppingArtecl {
+    flex: 0 0 90%; /* 1 produit par ligne */
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* Alignement général à gauche */
+  .promo {
+    width: 100% !important;
+   margin-right: 50px;
+    padding: 15px 0 15px 10px !important; /* Décale tout vers la gauche */
+    border-radius: 0 !important;
+  }
+
+  /* Conteneur principal aligné à gauche */
+  .promo .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Réorganisation verticale alignée à gauche */
+  .promo .row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important; /* Alignement à gauche */
+    gap: 15px !important;
+       margin-left: -200px;
+
+  }
+
+  /* 1ère ligne : Titre promo (haut) */
+  .promo .espace.col-md-4:first-child {
+    order: 1 !important;
+    padding-left: 10px !important;
+    text-align: left !important; /* Texte aligné à gauche */
+  }
+
+  /* 2ème ligne : Image (milieu) */
+  .promo .col-md-4.d-flex {
+    order: 2 !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    justify-content: flex-start !important; /* Alignement image à gauche */
+  }
+
+  .promo .trans {
+    position: relative !important;
+    height: 180px !important;
+    width: auto !important;
+    max-width: 80% !important;
+    margin-left: 10px !important; /* Décale l'image vers la gauche */
+    transform: none !important;
+  }
+
+  /* 3ème ligne : Texte + bouton (bas) */
+  .promo .espace.col-md-4:last-child {
+    order: 3 !important;
+    text-align: left !important; /* Texte aligné à gauche */
+    align-items: flex-start !important;
+    padding-left: 10px !important;
+    width: 100% !important;
+  }
+
+  /* Bouton aligné à gauche */
+  .promo .shop {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .shoppingArtecl {
+    flex: 0 0 22%;
+  }
+  
+  /* Taille des textes pour écrans moyens */
+  .promo h1 {
+    font-size: 2.2rem !important;
+  }
+  .promo h2 {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .shoppingArtecl {
+    flex: 0 0 30%;
+  }
+  
+  /* Ajustement image promo */
+  .promo .trans {
+    height: 250px !important;
+    max-width: 90% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .shoppingArtecl {
+    flex: 0 0 45%;
+  }
+
+  /* Version mobile - Taille augmentée */
+  .promo {
+    width: 100% !important;
+    padding: 20px 0 20px 15px !important;
+    margin-left: -100px;
+    
+  }
+
+  .promo .row {
+    gap: 20px !important;
+  }
+
+  /* Texte agrandi */
+  .promo h1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  
+  .promo h2 {
+    font-size: 1.6rem !important;
+  }
+  
+  .promo p {
+    font-size: 1.1rem !important;
+  }
+
+  /* Image agrandie */
+  .promo .trans {
+    height: 500px !important;
+    max-width: 95% !important;
+    margin-left:-105px !important;
+  }
+
+  /* Bouton agrandi */
+  .promo .shop {
+    padding: 8px 25px !important;
+    font-size: 1.1rem !important;
+  }
+  .espace{margin-left: -100px;
+  }
+}
+
+/* Version mobile - 2 produits par ligne */
+@media (max-width: 768px) {
+  .containerShopping {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr); /* 2 colonnes */
+    gap: 1px; /* Espace entre les produits */
+    overflow-x: hidden !important; /* Désactive le défilement horizontal */
+    padding: 10px !important;
+    transform: none !important; /* Supprime le décalage */
+  }
+
+  .shoppingArtecl {
+    width: 100% !important;
+    height: auto !important;
+    padding: 10px !important;
+    margin: 0 !important;
+  }
+
+  .shoppingArtecl > div {
+    width: 100% !important;
+    height: 180px !important; /* Hauteur fixe pour l'image */
+  }
+
+  .imagepromo {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .shoppingArtecl p {
+    font-size: 14px !important;
+    margin: 8px 0 4px 0 !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .prices {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .new-price, .old-price {
+    font-size: 14px !important;
+  }
+
+  .Profiter {
+    width: 100% !important;
+    padding: 8px !important;
+    font-size: 14px !important;
+  }
+}

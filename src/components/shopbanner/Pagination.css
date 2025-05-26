@@ -1,0 +1,29 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+  }
+  
+  .page-btn {
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    color: #555;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .page-btn.active {
+    background-color: #00796b;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .page-btn:hover:not(.active):not(:disabled) {
+    background-color: #e0e0e0;
+  }
+  

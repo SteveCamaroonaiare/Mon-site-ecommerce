@@ -1,0 +1,16 @@
+.paiement{
+    background-color: rgb(209, 130, 12);
+    font-size: 20px;
+    margin-left: 320px;
+}
+.paiement:hover{background-color: black;
+color: aliceblue;}
+
+.supprimer{
+    background-color: rgba(204, 122, 0, 0.897);
+    font-size:18px;
+}
+.supprimer:hover{
+    border: 1px solid black;
+    color: black;
+}
