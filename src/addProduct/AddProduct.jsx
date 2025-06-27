@@ -14,7 +14,8 @@ const AddProduct = () => {
     is_trending: false, // Initialiser comme booléen
     is_promo: false, // Initialiser comme booléen
     percent: 0,
-    numberOfStars: 5 // Valeur par défaut
+    numberOfStars: 5, // Valeur par défaut,
+    moreImgs: []
   });
 
   const handleChange = (e) => {
@@ -22,6 +23,7 @@ const AddProduct = () => {
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : 
+              type === 'file' && name === 'moreImgs' ? Array.from(files) :
               type === 'file' ? files[0] : value
     }));
   };
@@ -43,6 +45,13 @@ const AddProduct = () => {
     if (formData.image) {
         formDataToSend.append('image', formData.image);
     }
+    // Images miniatures
+    if (formData.moreImgs.length > 0) {
+        formData.moreImgs.forEach((file, index) => {
+            formDataToSend.append(`moreImgs[${index}]`, file);
+        });
+    }
+
 
     try {
         const response = await axios.post('http://localhost:8000/api/products', formDataToSend, {
@@ -51,8 +60,12 @@ const AddProduct = () => {
             }
         });
         console.log('Success:', response.data);
+              alert('Produit ajouté avec succès !');
+
     } catch (error) {
         console.error('Error:', error.response.data);
+        alert('Erreur lors de l’ajout du produit.');
+
     }
 };
 
@@ -111,7 +124,9 @@ const AddProduct = () => {
         <option value="Femmes">Femmes</option>
         <option value="Enfants">Enfants</option>
       </select>
-
+      
+      <div>
+        <label>Image principale :</label>
       <input
         type="file"
         name="image"
@@ -120,6 +135,21 @@ const AddProduct = () => {
         accept="image/*"
         className="form-input-file"
       />
+      </div>
+
+      
+      <div>
+        <label>Images miniatures :</label>
+        <input
+          type="file"
+          name="moreImgs"
+          multiple
+          accept="image/*"
+          onChange={handleChange}
+          className="form-input-file"
+
+        />
+      </div>
 
       <div className="form-checkbox-group">
         <label className="form-checkbox-label">
@@ -165,6 +195,7 @@ const AddProduct = () => {
           className="form-input"
         />
       )}
+
 
       <button type="submit" className="form-button">
         Ajouter le produit

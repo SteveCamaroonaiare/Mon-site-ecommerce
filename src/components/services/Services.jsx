@@ -13,7 +13,7 @@ import vest5 from '../../assets/img/vest5.jpg'
 import vest3 from '../../assets/img/vest3.jpg'
 
 
-
+import { Link } from 'react-router-dom'
 // Données avec classes Font Awesome
 const serviceData = [
   {
@@ -115,7 +115,9 @@ const Services = () => {
           {/* Élément 1 : Lookbook de la saison */}
           <div className="service-item">
             {/* Remplacez "path/to/image1.jpg" par le chemin de votre image */}
-            <img src={vest1} alt="Lookbook de la saison" className="service-image" style={{height:"500px",width:"300px"}} />
+            <Link to="/Guide1">
+                 <img src={vest1} alt="Lookbook de la saison" className="service-image" style={{height:"500px",width:"300px"}} />
+            </Link>
             <h3 className="service-item-title">Lookbook de la saison</h3>
             <p className="service-item-description">
               Découvrez les dernières tendances et inspirez vos tenues avec nos conseils mode.

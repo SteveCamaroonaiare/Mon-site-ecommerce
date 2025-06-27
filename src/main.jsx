@@ -24,8 +24,11 @@ import ShowProduct from "./showproduct/ShowProduct.jsx"; // <-- depuis src direc
 import ForgotPassword from './components/forgotpassword/ForgotPassword';
 import Register from './login/Register';
 import GoogleLogin from './login/GoogleLogin';
-
-
+import CartNotification from './showproduct/CartNotification';
+import ProductImages from './showproduct/ProductImages.jsx';
+import SizeSelector from './showproduct/SizeSelector.jsx';
+import ColorSelector from './showproduct/ColorSelector.jsx';
+import Guide1  from './components/guide/Guide1.jsx';
 
 import {
   createBrowserRouter,
@@ -48,12 +51,20 @@ const router = createBrowserRouter([
 
 
       {path:"/ShowProduct/:id" , element:<ShowProduct/>},
+      {path:"CartNotification" , element:<CartNotification/>},
+      {path:"ProductImages" , element:<ProductImages/>},
+      {path:"ColorSelector" , element:<ColorSelector/>},
+      {path:"SizeSelector" , element:<SizeSelector/>},
+
+
 
       {path:"/Panier" , element:<Panier/>},
       {path:"/MyAccount" , element:<MyAccount/>},
       
       {path:"/Addproduct" , element:<AddProduct/>},
+      {path:"/Guide1" , element:<Guide1/>},
 
+      
 
 
       

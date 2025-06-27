@@ -1,14 +1,27 @@
-import React ,{useState}from 'react';
+import React, { useState, useEffect } from 'react';
 import './HomeShop.css';
 import { FaHeart, FaShoppingCart } from 'react-icons/fa';
 import ShopBanner from '../components/shopbanner/ShopBanner';
 import Footer from '../components/footer/Footer';
 import { Link } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 const HomeShop = () => {
 
-    const [showSubMenu, setShowSubMenu] = useState(false);
-    const [selectedCategory, setSelectedCategory] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const [showSubMenu, setShowSubMenu] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const location = useLocation();
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const category = params.get("category");
+
+    if (category) {
+      setShowSubMenu(true);            // Ouvre le sous-menu
+      setSelectedCategory(category);   // Stocke la catégorie pour déclencher une action
+    }
+  }, [location.search]);
   const toggleSubMenu = (e) => {
     e.preventDefault(); // pour éviter la redirection
     setShowSubMenu(!showSubMenu);
@@ -20,7 +33,7 @@ const HomeShop = () => {
   };
 
 
- 
+
   return (
     <div className="home-shop-container">
       {/* Top Header */}
@@ -34,10 +47,10 @@ const HomeShop = () => {
       {/* Main Navigation */}
       <div className="main-nav">
         <div className="logo">Step-ZOne<span className="leaf"></span></div>
-        <nav className="nav-links"> 
+        <nav className="nav-links">
           <a href="/">Accueil</a>
           <ul>
-        <li>
+            <li>
               <a href="/HomeShop" className="active" onClick={toggleSubMenu}>
                 Boutique
               </a>
@@ -49,15 +62,19 @@ const HomeShop = () => {
                 </ul>
               )}
             </li>
-      </ul>
-          
-  
+          </ul>
+
+
           <a hAref="/MyAccount">Mon Compte</a>
           <a href="/login">Connexion</a>
         </nav>
         <div className="search-icons">
-          <input type="text" placeholder="Search for items..." />
-          <FaHeart className="icon" />
+          <input
+            type="text"
+            placeholder="Search for items..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />          <FaHeart className="icon" />
           <Link to='/Panier'><FaShoppingCart className="icon" /></Link>
         </div>
       </div>
@@ -71,14 +88,14 @@ const HomeShop = () => {
       <div className='bots'>
         <h2 className='bot'>cherchez parmi nos <span>200</span> produits</h2>
 
-        </div>
+      </div>
 
 
       <section>
-        <ShopBanner category={selectedCategory}/>
+        <ShopBanner category={selectedCategory} searchTerm={searchTerm} />
       </section>
       <section>
-      <Footer/>
+        <Footer />
 
       </section>
     </div>

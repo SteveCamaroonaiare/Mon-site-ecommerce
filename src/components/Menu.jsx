@@ -24,14 +24,14 @@ const Menu = () => {
           <div className="logo-section">
             <img src={logo} alt="StepZone Logo" className="logo" />
           </div>
-          <p className="sub-slogan">
+          <p className="sub-slogan" style={{ color: "white" }}>
             CHAUSSURES LUXUEUSES
             <br />
             Passez vos Commandes
           </p>
         </div>
         
-        <nav className="menu-links">
+        <nav className="menu-links" >
           <Link to="/" onClick={() => setIsOpen(false)}>Accueil</Link>
           <Link to="/HomeShop" onClick={() => setIsOpen(false)}>Boutique</Link>
           <Link to="/MyAccount" onClick={() => setIsOpen(false)}>Mon compte</Link>

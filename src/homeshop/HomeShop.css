@@ -234,3 +234,41 @@ display: none;    align-items: flex-start;
     font-size: 1.1rem;
   }
 }
+
+
+
+.search-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f4f4f4;
+  padding: 6px 10px;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-icons input[type="text"] {
+  padding: 8px 14px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 14px;
+  width: 200px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.search-icons input[type="text"]:focus {
+  width: 250px;
+}
+
+.search-icons .icon {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.search-icons .icon:hover {
+  color: #d4af37; /* Or doré pour rester dans ton thème */
+}

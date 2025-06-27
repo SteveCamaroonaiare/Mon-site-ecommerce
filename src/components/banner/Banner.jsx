@@ -14,6 +14,7 @@ import e4 from '../../assets/img/e4.jpg';
 import f71 from '../../assets/img/f71.png';
 
 import { Link } from 'react-router-dom';
+import HomeShop from '../../homeshop/HomeShop';
 
 const Banner = () => {
     const shoppingContainerRef = useRef(null);
@@ -27,10 +28,10 @@ const Banner = () => {
       try {
         setLoading(true);
         const [promoRes] = await Promise.all([
-          axios.get("http://localhost:8000/api/products/promo").catch(e => ({ data: [] })),
+          axios.get("http://localhost:8000/api/products/promo?limit=5").catch(e => ({ data: [] })),
         ]);
         console.log("Données promo:", promoRes.data); // Inspectez la structure
-        setPromoProducts(promoRes?.data || []);
+setPromoProducts((promoRes?.data || []).sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
 
       } catch (err) {
         console.error("Error:", err);
@@ -59,7 +60,7 @@ const Banner = () => {
             <div className="shopping">
                 {/* Nos Promotions */}
                 <div className="sommer">
-                    <h2 className="title Tend">Nos Promotions</h2>
+                    <h2 className="titre Tend">Nos Promotions</h2>
                 </div>
                 
                 {loading ? (
@@ -71,7 +72,7 @@ const Banner = () => {
                         
                         
                         <div className="containerShopping" ref={shoppingContainerRef}>
-                            {promoProducts.slice(0,5).map((product) => (
+                            {promoProducts.map((product) => (
                                 <div className="shoppingArtecl" key={product.id}>
                                   <Link 
                                       to={`/ShowProduct/${product.id}`}
@@ -85,10 +86,9 @@ const Banner = () => {
                                         />
                                     </div>
                                     <p>{product.name}</p>
-                                    <span className="new-price">{product.promo_price}Dh</span>
-                                    <span className="old-price">{product.price}Dh</span><br />
+                                    <span className="new-price">{product.promo_price} Dh</span>
+                                    <span className="old-price">{product.price} Dh</span><br />
                                     </Link>
-                                    <span><button className='Profiter'>Profitez</button></span>
                                 </div>
                             ))}
                         </div>
@@ -126,9 +126,9 @@ const Banner = () => {
                                     <p className="fw-bold fs-5 mb-1">Marche avec style.</p>
                                     <h2 className="fw-bold fs-3 mb-1">Découvrez notre nouvelle collection 2025.</h2>
                                     <p className="small mb-3">Des chaussures conçues pour allier élégance, confort et durabilité. Que vous soyez en quête de sneakers tendance, de talons élégants ou de bottines intemporelles, notre sélection a été pensée pour sublimer chacun de vos pas.</p>
-                                    <button className="shop btn btn-light rounded-pill px-4 py-2">
+                                    <Link to="/HomeShop"><button className="shop btn btn-light rounded-pill px-4 py-2">
                                       Shop Now
-                                    </button>
+                                    </button></Link>
                                   </div>
 
                                 </div>

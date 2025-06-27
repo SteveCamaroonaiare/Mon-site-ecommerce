@@ -5,7 +5,7 @@ import Pagination from "./Pagination.jsx";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const ShopBanner = ({ category }) => {
+const ShopBanner = ({ category,searchTerm }) => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 8;
@@ -24,8 +24,12 @@ const ShopBanner = ({ category }) => {
     fetchProducts();
   }, [category]);
 
-  const totalPages = Math.ceil(products.length / productsPerPage);
-  const currentProducts = products.slice(
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(searchTerm?.toLowerCase() || '')
+  );
+
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+  const currentProducts = filteredProducts.slice(
     (currentPage - 1) * productsPerPage,
     currentPage * productsPerPage
   );

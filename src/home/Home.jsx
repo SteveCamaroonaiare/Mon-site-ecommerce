@@ -20,8 +20,10 @@ import f2 from "../assets/img/f2.jpg";
 import store from "../assets/img/store.jpg";
 import store2 from "../assets/img/store2.jpg";
 import storeenfants from "../assets/img/storeenfants.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate=useNavigate()
   // States for products
   const [newProducts, setNewProducts] = useState([]);
   const [trendingProducts, setTrendingProducts] = useState([]);
@@ -78,7 +80,7 @@ const Home = () => {
         <header className="top-banner">
           <div className="account-section">
             <a href="/login">
-              <button className="signin">Sign in</button>
+              <button className="signin">SignIn</button>
             </a>
             <div className="search-icons">
               <Link to='/Panier'><FaShoppingCart className="icon" /></Link>
@@ -120,7 +122,7 @@ const Home = () => {
                   <div className="text-zone">
                     <h3>Pour Hommes</h3>
                     <p>Faites vos choix</p>
-                    <Link to="/HomeShop">Boutique</Link>
+                   <button onClick={() => navigate("/HomeShop?category=hommes")}>Boutique1</button>
                   </div>
                   <div className="image-zone">
                     <img src={store} alt="Pour Hommes"  />
@@ -133,7 +135,7 @@ const Home = () => {
                   <div className="text-zone">
                     <h3>Pour Femmes</h3>
                     <p>Faites vos choix</p>
-                    <Link to="/HomeShop">Boutique</Link>
+                    <button onClick={() => navigate("/HomeShop?category=femmes")}>Boutique2</button>
                   </div>
                   <div className="image-zone">
                     <img src={store2} alt="Pour Femmes" />
@@ -148,7 +150,7 @@ const Home = () => {
                   <div className="text-zone">
                     <h3>Pour Enfants</h3>
                     <p>Faites vos choix</p>
-                    <Link to="/HomeShop">Boutique</Link>
+                    <button onClick={() => navigate("/HomeShop?category=enfants")}>Boutique3</button>
                   </div>
                   <div className="image-zone">
                     <img src={storeenfants} alt="Pour Enfants" />
@@ -178,7 +180,7 @@ const Home = () => {
                   </Link>
                   <h4 className="nom">{product.name}</h4>
                   <div className="product-pricing">
-                    <span className="price">{product.price}Dh</span>
+                    <span className="price">{product.price} Dh</span>
                     {product.is_promo && (
                       <span className="promo-price">{product.promo_price}Dh</span>
                     )}
@@ -257,7 +259,7 @@ const Home = () => {
                           <div className="course-content">
                             <h6>{product.name}</h6>
                             <div className="course-price">
-                              ${product.price}
+                            {product.price} Dh
                               {product.is_promo && (
                                 <span className="promo">{product.promo_price}Dh</span>
                               )}
