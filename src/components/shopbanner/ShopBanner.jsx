@@ -13,7 +13,7 @@ const ShopBanner = ({ category,searchTerm }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/products/shop?limit=8", {
+        const response = await axios.get("http://steve.new-mande.com/api/products/shop?limit=8", {
           params: { category }
         });
         setProducts(response.data);
@@ -41,7 +41,7 @@ const ShopBanner = ({ category,searchTerm }) => {
           <Link to={`/ShowProduct/${product.id}`}
            state={{ productData: product }}>
             <img
-              src={`http://localhost:8000/Storage${product.image}`}
+              src={`http://steve.new-mande.com/Storage${product.image}`}
               alt={product.name}
 
               className="product-image"

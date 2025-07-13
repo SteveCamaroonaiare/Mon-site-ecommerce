@@ -54,7 +54,7 @@ const AddProduct = () => {
 
 
     try {
-        const response = await axios.post('http://localhost:8000/api/products', formDataToSend, {
+        const response = await axios.post('http://steve.new-mande.com/api/products', formDataToSend, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

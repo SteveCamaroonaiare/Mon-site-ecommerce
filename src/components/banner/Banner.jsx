@@ -28,7 +28,7 @@ const Banner = () => {
       try {
         setLoading(true);
         const [promoRes] = await Promise.all([
-          axios.get("http://localhost:8000/api/products/promo?limit=5").catch(e => ({ data: [] })),
+          axios.get("http://steve.new-mande.com/api/products/promo?limit=5").catch(e => ({ data: [] })),
         ]);
         console.log("Données promo:", promoRes.data); // Inspectez la structure
 setPromoProducts((promoRes?.data || []).sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
@@ -80,7 +80,7 @@ setPromoProducts((promoRes?.data || []).sort((a, b) => new Date(b.created_at) - 
                                   >
                                     <div>
                                         <img 
-                                            src={`http://localhost:8000/Storage${product.image_url}`} 
+                                            src={`http://steve.new-mande.com/Storage${product.image_url}`} 
                                             alt={product.name}
                                             className='imagepromo'
                                         />

@@ -13,7 +13,7 @@ const Profile = ({ user, setActived }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/signOut",
+        "http://steve.new-mande.com/api/signOut",
         {},
         {
           headers: { Authorization: `Bearer ${token}` } // ✅ fix here

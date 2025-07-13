@@ -41,7 +41,7 @@ const ShowProduct = ({ images }) => {
   useEffect(() => {
     const fetchHomeProducts = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/products/${id}`)
+        const response = await axios.get(`http://steve.new-mande.com/api/products/${id}`)
         setproduct(response.data)
         console.log(response.data)
       } catch (err) {
@@ -89,7 +89,7 @@ setShowNotification(true);
   const [mainImage, setMainImage] = useState(''); // image principale
   useEffect(() => {
     if (product.image) {
-      setMainImage(`http://localhost:8000/Storage/${product.image}`);
+      setMainImage(`http://steve.new-mande.com/Storage/${product.image}`);
     }
   }, [product.image]);
 
@@ -180,7 +180,7 @@ setShowNotification(true);
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/products/${id}/comments`);
+        const response = await axios.get(`http://steve.new-mande.com/api/products/${id}/comments`);
         setComments(response.data.comments);
       } catch (error) {
         console.error("Erreur lors du chargement des commentaires:", error);
@@ -199,7 +199,7 @@ setShowNotification(true);
       const token = localStorage.getItem('token');
 
       const response = await axios.post(
-        `http://localhost:8000/api/products/${id}/comments`,
+        `http://steve.new-mande.com/api/products/${id}/comments`,
         {
           message: newComment.message,
           numberOfStars: newComment.numberOfStars,
@@ -226,7 +226,7 @@ setShowNotification(true);
     if (window.confirm("Voulez-vous vraiment supprimer ce commentaire ?")) {
       try {
         const token = localStorage.getItem('token');
-        await axios.delete(`http://localhost:8000/api/comments/${commentId}`, {
+        await axios.delete(`http://steve.new-mande.com/api/comments/${commentId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -285,12 +285,12 @@ setShowNotification(true);
           <div className="thumbnail-scroll-container">
             {product.image && (
               <img
-                src={`http://localhost:8000/Storage/${product.image}`}
+                src={`http://steve.new-mande.com/Storage/${product.image}`}
                 alt="Image principale"
                 className='details__small-img'
-                onClick={() => setMainImage(`http://localhost:8000/Storage/${product.image}`)}
+                onClick={() => setMainImage(`http://steve.new-mande.com/Storage/${product.image}`)}
                 style={{
-                  border: mainImage === `http://localhost:8000/Storage/${product.image}` ? '2px solid gold' : '1px solid #ccc'
+                  border: mainImage === `http://steve.new-mande.com/Storage/${product.image}` ? '2px solid gold' : '1px solid #ccc'
                 }}
               />
             )}
@@ -298,12 +298,12 @@ setShowNotification(true);
             {product.images && product.images.map((image, index) => (
               <img
                 key={index}
-                src={`http://localhost:8000/Storage/${image.path}`}
+                src={`http://steve.new-mande.com/Storage/${image.path}`}
                 alt={`Miniature ${index + 1}`}
                 className='details__small-img'
-                onClick={() => setMainImage(`http://localhost:8000/Storage/${image.path}`)}
+                onClick={() => setMainImage(`http://steve.new-mande.com/Storage/${image.path}`)}
                 style={{
-                  border: mainImage === `http://localhost:8000/Storage/${image.path}` ? '2px solid gold' : '1px solid #ccc'
+                  border: mainImage === `http://steve.new-mande.com/Storage/${image.path}` ? '2px solid gold' : '1px solid #ccc'
                 }}
               />
             ))}
