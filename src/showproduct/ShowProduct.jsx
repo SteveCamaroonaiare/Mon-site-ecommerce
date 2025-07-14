@@ -285,12 +285,12 @@ setShowNotification(true);
           <div className="thumbnail-scroll-container">
             {product.image && (
               <img
-                src={`https://steve.new-mande.com/Storage/${product.image}`}
+                src={`https://steve.new-mande.com/storage/${product.image}`}
                 alt="Image principale"
                 className='details__small-img'
-                onClick={() => setMainImage(`https://steve.new-mande.com/Storage/${product.image}`)}
+                onClick={() => setMainImage(`https://steve.new-mande.com/storage/${product.image}`)}
                 style={{
-                  border: mainImage === `https://steve.new-mande.com/Storage/${product.image}` ? '2px solid gold' : '1px solid #ccc'
+                  border: mainImage === `https://steve.new-mande.com/storage/${product.image}` ? '2px solid gold' : '1px solid #ccc'
                 }}
               />
             )}
@@ -298,12 +298,12 @@ setShowNotification(true);
             {product.images && product.images.map((image, index) => (
               <img
                 key={index}
-                src={`https://steve.new-mande.com/Storage/${image.path}`}
+                src={`https://steve.new-mande.com/storage/${image.path}`}
                 alt={`Miniature ${index + 1}`}
                 className='details__small-img'
-                onClick={() => setMainImage(`https://steve.new-mande.com/Storage/${image.path}`)}
+                onClick={() => setMainImage(`https://steve.new-mande.com/storage/${image.path}`)}
                 style={{
-                  border: mainImage === `https://steve.new-mande.com/Storage/${image.path}` ? '2px solid gold' : '1px solid #ccc'
+                  border: mainImage === `https://steve.new-mande.com/storage/${image.path}` ? '2px solid gold' : '1px solid #ccc'
                 }}
               />
             ))}

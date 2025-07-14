@@ -173,7 +173,7 @@ const Home = () => {
                   <Link to={`/ShowProduct/${product.id}`}
                    state={{ productData: product }}>
                     <img 
-                      src={`https://steve.new-mande.com/Storage${product.image_url}`} 
+                      src={`https://steve.new-mande.com/storage${product.image_url}`} 
                       alt={product.name} 
                       className="news-img"
                     />
@@ -249,7 +249,7 @@ const Home = () => {
                             <Link to={`/Showproduct/${product.id}`}
                              state={{ productData: product }}>
                               <img 
-                                src={`https://steve.new-mande.com/Storage${product.image_url}`} 
+                                src={`https://steve.new-mande.com/storage${product.image_url}`} 
                                 
                                 alt={product.name}
                                 className="nome"

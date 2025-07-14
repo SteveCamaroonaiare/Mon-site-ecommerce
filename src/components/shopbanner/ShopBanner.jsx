@@ -41,7 +41,7 @@ const ShopBanner = ({ category,searchTerm }) => {
           <Link to={`/ShowProduct/${product.id}`}
            state={{ productData: product }}>
             <img
-              src={`http://steve.new-mande.com/Storage${product.image}`}
+              src={`http://steve.new-mande.com/storage${product.image}`}
               alt={product.name}
 
               className="product-image"

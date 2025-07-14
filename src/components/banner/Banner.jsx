@@ -80,7 +80,7 @@ setPromoProducts((promoRes?.data || []).sort((a, b) => new Date(b.created_at) - 
                                   >
                                     <div>
                                         <img 
-                                            src={`http://steve.new-mande.com/Storage${product.image_url}`} 
+                                            src={`http://steve.new-mande.com/storage${product.image_url}`} 
                                             alt={product.name}
                                             className='imagepromo'
                                         />
