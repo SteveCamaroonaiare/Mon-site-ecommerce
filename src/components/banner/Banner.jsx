@@ -28,7 +28,7 @@ const Banner = () => {
       try {
         setLoading(true);
         const [promoRes] = await Promise.all([
-          axios.get("http://steve.new-mande.com/api/products/promo?limit=5").catch(e => ({ data: [] })),
+          axios.get("https://steve.new-mande.com/api/products/promo?limit=5").catch(e => ({ data: [] })),
         ]);
         console.log("Données promo:", promoRes.data); // Inspectez la structure
 setPromoProducts((promoRes?.data || []).sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
