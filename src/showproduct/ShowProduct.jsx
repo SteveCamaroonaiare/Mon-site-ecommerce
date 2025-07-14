@@ -61,8 +61,8 @@ const ShowProduct = ({ images }) => {
 const productToAdd = {
   ...product,
   quantity: 1,
-  image: mainImage.includes('Storage/')
-    ? mainImage.split('Storage/')[1]
+  image: mainImage.includes('storage/')
+    ? mainImage.split('storage/')[1]
     : product.image
 };
 
@@ -89,7 +89,7 @@ setShowNotification(true);
   const [mainImage, setMainImage] = useState(''); // image principale
   useEffect(() => {
     if (product.image) {
-      setMainImage(`https://steve.new-mande.com/Storage/${product.image}`);
+      setMainImage(`https://steve.new-mande.com/storage/${product.image}`);
     }
   }, [product.image]);
 
