@@ -38,8 +38,8 @@ const Home = () => {
       try {
         setLoading(true);
         const [newRes, trendingRes] = await Promise.all([
-          axios.get("http://steve.new-mande.com/api/products/new?limit=3").catch(e => ({ data: [] })),
-          axios.get("http://steve.new-mande.com/api/products/trending").catch(e => ({ data: [] }))
+          axios.get("https://steve.new-mande.com/api/products/new?limit=3").catch(e => ({ data: [] })),
+          axios.get("https://steve.new-mande.com/api/products/trending").catch(e => ({ data: [] }))
         ]);
         console.log("Données tendances:", trendingRes.data); // Inspectez la structure
         setNewProducts(newRes?.data || []);
@@ -173,7 +173,7 @@ const Home = () => {
                   <Link to={`/ShowProduct/${product.id}`}
                    state={{ productData: product }}>
                     <img 
-                      src={`http://steve.new-mande.com/Storage${product.image_url}`} 
+                      src={`https://steve.new-mande.com/Storage${product.image_url}`} 
                       alt={product.name} 
                       className="news-img"
                     />
@@ -249,7 +249,7 @@ const Home = () => {
                             <Link to={`/Showproduct/${product.id}`}
                              state={{ productData: product }}>
                               <img 
-                                src={`http://steve.new-mande.com/Storage${product.image_url}`} 
+                                src={`https://steve.new-mande.com/Storage${product.image_url}`} 
                                 
                                 alt={product.name}
                                 className="nome"

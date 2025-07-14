@@ -53,7 +53,7 @@ const MonCompte = () => {
         setErrorOrders(null);
         try {
           const token = localStorage.getItem("token");
-          const response = await axios.get("http://steve.new-mande.com/api/orders", {
+          const response = await axios.get("https://steve.new-mande.com/api/orders", {
             headers: { Authorization: `Bearer ${token}` }
           });
           setOrders(response.data);
@@ -79,7 +79,7 @@ const MonCompte = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.patch(
-        "http://steve.new-mande.com/api/profile",
+        "https://steve.new-mande.com/api/profile",
         formData,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -111,7 +111,7 @@ const MonCompte = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.patch(
-        "http://steve.new-mande.com/api/change-password",
+        "https://steve.new-mande.com/api/change-password",
         passwordData,
         {
           headers: {

@@ -57,7 +57,7 @@ export default function Panier() {
     };
 
     try {
-      const response = await axios.post("http://steve.new-mande.com/api/orders", orderData);
+      const response = await axios.post("https://steve.new-mande.com/api/orders", orderData);
       alert("✅ Commande enregistrée avec succès !");
       Cookies.remove("cart");
       setCart([]);
@@ -105,7 +105,7 @@ export default function Panier() {
             {cart.map(item => (
               <div key={item.id} className="col-12">
                 <div className="card cart-item">
-                  <img src={`http://steve.new-mande.com/storage/${item.image}`} alt={item.name} className="cart-image" />
+                  <img src={`https://steve.new-mande.com/storage/${item.image}`} alt={item.name} className="cart-image" />
                   <div className="cart-content">
                     <div className="cart-header">
                       <h5 className="espace">{item.name}</h5>
