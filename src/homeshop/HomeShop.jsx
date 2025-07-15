@@ -65,7 +65,7 @@ const HomeShop = () => {
           </ul>
 
 
-          <a hAref="/MyAccount">Mon Compte</a>
+          <a href="/MyAccount">Mon Compte</a>
           <a href="/login">Connexion</a>
         </nav>
         <div className="search-icons">
