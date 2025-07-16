@@ -91,14 +91,14 @@ const Home = () => {
         {/* Hero Section */}
         <div className="details_container">
           <div className="entete">
-            <h2 className="fw-bold principal as" style={{color: 'rgb(226, 174, 2)'}}>
+            <h2 className="fw-bold principal as " style={{color: 'rgb(226, 174, 2)'}}>
               Découvrez nos collections tendance,<br/>
-              Exprimez votre style unique à chaque pas,<br/>
-              Profitez d'offres exclusives toute l'année !
+              Exprimez votre style unique ,
+              Profitez<br/> d'offres exclusives toute l'année !
             </h2>
             <p className="fw-bold principal asp" style={{fontSize: "18px"}}>
-              Nous sélectionnons pour vous les meilleures marques au meilleur prix.<br/>
-              Explorez nos collections tendance et trouvez votre coup de cœur dès aujourd'hui.
+              Nous sélectionnons pour vous les <br /> meilleures marques au meilleur prix.<br/>
+              Explorez nos collections tendances.
             </p>
           </div>
 

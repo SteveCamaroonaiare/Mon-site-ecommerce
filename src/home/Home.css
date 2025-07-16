@@ -58,11 +58,15 @@ margin-left: 330px;
 @media (max-width: 768px) {
   .mobile-menu-btn {
     display: block;
+    margin-top: -14px;
+    margin-left: -14px;
+    font-size: 1.8rem;
   }
   
   .sidebar {
     transform: translateX(-100%);
     width: 280px;
+    
   }
   
   .sidebar.open {
@@ -75,6 +79,7 @@ margin-left: 330px;
     padding: 20px;
     transform: none;
     margin-right: 0;
+    
   }
   
   .menu-links a {
@@ -128,7 +133,7 @@ margin-left: 330px;
 }
 .logo-section {
   text-align: center;
-  margin-right: 130px;
+  margin-right: 10px;
 }
 
 .logo {
@@ -817,21 +822,19 @@ margin-left: 0;
 
   .entete {
     width: 100%;
-    text-align: center;
     margin-top: 0;
-    margin-left: -200px;
+    margin-left: -50px;
     width: 100%;
   }
-  
-  .asp{
-    display: none;
-  }
  
+  
+
 .fw-bold{
   margin-right:600px;
   font-size: 16px;
 }
 
+.signin{margin-bottom: -20px;}
   .principal {
     font-size: 1.2rem !important;
     line-height: 1.4;
