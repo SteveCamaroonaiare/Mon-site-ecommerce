@@ -109,7 +109,7 @@ const Services = () => {
 
     <section className="services-section">
       <div className="container">
-        <h2 className="services-title">Guide / Conseils de Style</h2>
+        <h2 className="services-title">Conseils de Style</h2>
         <p className="services-subtitle">Comment porter nos chaussures ?</p>
         <div className="services-content">
           {/* Élément 1 : Lookbook de la saison */}
