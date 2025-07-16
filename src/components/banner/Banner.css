@@ -441,9 +441,27 @@ transform: translateX(130px);}
 
 /* Version mobile - 2 produits par ligne */
 @media (max-width: 768px) {
+  .espace p {
+    font-size: 1.2rem !important;
+    margin-left: 90px;
+  }
+  .espace h2 {
+    font-size: 1.6rem !important;
+    margin-left: 90px;
+  }
+  .espace h1{
+    font-size: 1.6rem !important;
+    margin-left: 90px;
+  }
+  .sommer h2{
+    font-size: 2rem !important;
+    font-family: Merriweather, sans-serif;
+        margin-left: 30px;
+
+  }
   .containerShopping {
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr); /* 2 colonnes */
+    grid-template-columns: repeat(1, 1fr); /* 2 colonnes */
     gap: 1px; /* Espace entre les produits */
     overflow-x: hidden !important; /* Désactive le défilement horizontal */
     padding: 10px !important;
@@ -491,4 +509,7 @@ transform: translateX(130px);}
     padding: 8px !important;
     font-size: 14px !important;
   }
+  
+  
 }
+

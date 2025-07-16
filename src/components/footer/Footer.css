@@ -183,10 +183,18 @@ padding: 20px;}
     
   }
 
+  .h{
+        margin-left: -1030px;
+
+  }
+  .hh{
+    margin-left: -1000px;
+  }
   .hhh {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    ;
   }
 
   .hhh input,
@@ -194,6 +202,7 @@ padding: 20px;}
     width: 100%;
     padding: 12px;
     font-size: 1rem;
+    max-width: 310px;
   }
   
 }

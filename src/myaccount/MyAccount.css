@@ -216,7 +216,12 @@
     flex-direction: column;
     margin: 20px;
   }
-  
+  .deb{
+    display: none;
+  }
+  .debut {
+    display: none;
+  }
   .sidebars {
     width: 100%;
     padding: 20px 0;

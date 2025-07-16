@@ -98,7 +98,7 @@ setPromoProducts((promoRes?.data || []).sort((a, b) => new Date(b.created_at) - 
             </div>
                         {/*PROMO*/}
 
-                        <div className="promo py-5" style={{ minHeight: '250px', backgroundColor: 'rgb(226, 174, 2)',position:"relative"}}>
+                        <div className="promo py-5 promo-section" style={{ minHeight: '250px', backgroundColor: 'rgb(226, 174, 2)',position:"relative"}}>
                               <div className="container">
                                 <div className="row align-items-center text-white rounded-4">
 
@@ -125,7 +125,7 @@ setPromoProducts((promoRes?.data || []).sort((a, b) => new Date(b.created_at) - 
                                   <div className="espace col-md-4 p-4 d-flex flex-column justify-content-center align-items-end text-end">
                                     <p className="fw-bold fs-5 mb-1">Marche avec style.</p>
                                     <h2 className="fw-bold fs-3 mb-1">Découvrez notre nouvelle collection 2025.</h2>
-                                    <p className="small mb-3">Des chaussures conçues pour allier élégance, confort et durabilité. Que vous soyez en quête de sneakers tendance, de talons élégants ou de bottines intemporelles, notre sélection a été pensée pour sublimer chacun de vos pas.</p>
+                                    <p className="small mb-3">Des chaussures conçues pour <br />allier  élégance, confort et <br />durabilité. Que vous soyez en <br />quête de sneakers tendance, <br />de talons élégants ou de bottines <br /> intemporelles, notre sélection a  <br />été pensée pour sublimer chacun <br /> de vos pas.</p>
                                     <Link to="/HomeShop"><button className="shop btn btn-light rounded-pill px-4 py-2">
                                       Shop Now
                                     </button></Link>

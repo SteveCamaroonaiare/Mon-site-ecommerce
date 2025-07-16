@@ -60,7 +60,7 @@ const faqData = [
     answer: "Oui, pour toute commande supérieure à 500 MAD.",
   },
   {
-    question: "Quels sont les moyens de paiement acceptés ?",
+    question: "Quels  moyens de paiement acceptés ?",
     answer: "Nous acceptons les paiements par carte, PayPal, et paiement à la livraison.",
   },
 ];
@@ -120,7 +120,7 @@ const Services = () => {
             </Link>
             <h3 className="service-item-title">Lookbook de la saison</h3>
             <p className="service-item-description">
-              Découvrez les dernières tendances et inspirez vos tenues avec nos conseils mode.
+              Découvrez les dernières tendances et inspirez vos <br />tenues avec nos conseils mode.
             </p>
           </div>
            {/* Élément 3 : Mini-tutos */}
@@ -128,7 +128,7 @@ const Services = () => {
             <img src={vest5} alt="Mini-tutos" className="service-image" />
             <h3 className="service-item-title">Mini-tutos</h3>
             <p className="service-item-description">
-              Profitez de nos conseils pratiques pour bien associer vos chaussures à votre garde-robe.
+              Profitez de nos conseils pratiques pour bien  <br />associer vos chaussures à votre garde-robe.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ const Services = () => {
             <img src={vest3} alt="Tendances Mode" className="service-image" style={{height:"500px",width:"300px"}}/>
             <h3 className="service-item-title">Tendances Mode</h3>
             <p className="service-item-description">
-              Suivez nos experts pour connaître les styles incontournables de la saison.
+              Suivez nos experts pour connaître les styles <br />incontournables de la saison.
             </p>
           </div>
 
@@ -170,7 +170,7 @@ const Services = () => {
            <section className="faq-section">
       <div className="container">
         <h2 className="faq-title">Foire aux Questions</h2>
-        <p className="faq-subtitle">Besoin d’aide ? Voici les réponses aux questions fréquentes.</p>
+        <p className="faq-subtitle">Besoin d’aide ? Voici les <br /> réponses aux questions fréquentes.</p>
 
         <div className="faq-list">
           {faqData.map((faq, index) => (

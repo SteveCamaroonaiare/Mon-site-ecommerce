@@ -9,7 +9,7 @@ const Footer = () => {
       <h2 className='h'>Passer votre information la</h2>
       </div>
      <div className='hh'>     
-       <h5> Mervi bien pour le confiance que vous nous accordez</h5>
+       <h5> Mervi bien pour le confiance que <br />vous nous accordez</h5>
      </div>  
      <div className='hhh'>
      <input type="text" placeholder='Enter your email...'/>

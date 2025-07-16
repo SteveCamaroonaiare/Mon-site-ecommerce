@@ -167,11 +167,21 @@
 
         
         @media (max-width: 768px) {
+.home-shop-container{
+            overflow-x: hidden;
+
+}
   .top-header {
     flex-direction: none;
     align-items: flex-start;
     font-size: 12px;
     padding: 10px;
+  }
+  .deb{
+    display: none;
+  }
+  .debut {
+    display: none;
   }
 
   .top-header span {

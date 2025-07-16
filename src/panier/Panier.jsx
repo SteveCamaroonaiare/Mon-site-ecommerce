@@ -72,10 +72,10 @@ export default function Panier() {
   return (
     <div className="home-shop-container">
       <div className="top-header">
-        <span>(+01)-2345-6789</span>
-        <span>Our location</span>
+        <span className='deb'>(+01)-2345-6789</span>
+        <span className='debut'>Our location</span>
         <span>Super Value Deals - Save more with coupons</span>
-        <span className="auth-links">Log In / Sign Up</span>
+        <span className="auth-links debut">Log In / Sign Up</span>
       </div>
 
       <div className="main-nav">

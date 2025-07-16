@@ -96,7 +96,7 @@ const Home = () => {
               Exprimez votre style unique à chaque pas,<br/>
               Profitez d'offres exclusives toute l'année !
             </h2>
-            <p className="fw-bold principal" style={{fontSize: "18px"}}>
+            <p className="fw-bold principal asp" style={{fontSize: "18px"}}>
               Nous sélectionnons pour vous les meilleures marques au meilleur prix.<br/>
               Explorez nos collections tendance et trouvez votre coup de cœur dès aujourd'hui.
             </p>
