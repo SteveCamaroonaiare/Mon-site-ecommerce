@@ -453,6 +453,14 @@ transform: translateX(130px);}
     font-size: 1.6rem !important;
     margin-left: 90px;
   }
+  .espace button {
+  background-image: linear-gradient(to right, #ffb109fb, #ffffff);
+  color: white; /* pour que le texte ressorte bien */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
   .sommer h2{
     font-size: 2rem !important;
     font-family: Merriweather, sans-serif;
